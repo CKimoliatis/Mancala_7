@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <iostream>
 #include <vector>
+
 #include "Player.h"
 #include "Records.h"
 #include "Board.h"
@@ -28,7 +29,7 @@ int main() {
     
     brd->printAll();
     
-    while(!board.gameOver()){   //Game ends when either side as 0 marbles in all pits
+    while(!board.gameOver()){ //Game ends when either side as 0 marbles in all pits
       if(playerTurn == 1){
         int currCell;
         board.printBoard();
