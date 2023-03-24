@@ -98,9 +98,9 @@ class Board{
     }
 
     void printBoard(){
-      cout<<" "<<cells[13]<<"|"<<cells[12]<<"|"<<cells[11]<<"|"                              <<cells[10]<<"|"<<cells[9]           <<"|"<<cells[8]<<endl;
+      cout<<" "<<cells[13]<<"|"<<cells[12]<<"|"<<cells[11]<<"|"<<cells[10]<<"|"<<cells[9]<<"|"<<cells[8]<<endl;
       cout<<cells[14]<<"==========="<<cells[7]<<endl;
-      cout<<" "<<cells[1]<<"|"<<cells[2]<<"|"<<cells[3]<<"|"                                <<cells[4]<<"|"<<cells[5]               <<"|"<<cells[6]<<endl;
+      cout<<" "<<cells[1]<<"|"<<cells[2]<<"|"<<cells[3]<<"|"<<cells[4]<<"|"<<cells[5]<<"|"<<cells[6]<<endl;
     }
 
     bool gameOver(){
