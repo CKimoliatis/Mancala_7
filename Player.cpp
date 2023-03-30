@@ -1,41 +1,54 @@
 #include "Player.h"
 
-Player:: Player() {
-    name = "";
-    win = 0;
-    loss = 0;
-    active = 0;
-}
-
 Player::Player(string n) {
-    name = n;
-    win = 0;
-    loss = 0;
-    active = 1;
+    data.username = n;
+    data.win = 0;
+    data.loss = 0;
 }
 
-Player::Player(string n, int w, int l) {
-    name = n;
-    win = w;
-    loss = l;
-    active = 1;
+void Player::setName(string n) {
+    data.username = n;
 }
 
-bool Player::getActive() {
-    bool temp;
-    active ? temp = 1 : temp = 0;
-    return temp;
+void Player::setWin(int w) {
+    data.win = w;
+}
+
+void Player::addWin() {
+    data.win++;
+}
+
+void Player::setLoss(int l) {
+    data.loss = l;
+}
+
+void Player::addLoss() {
+    data.loss++;
+}
+
+void Player::setPoints(int p) {
+    data.points = p;
+}
+
+string Player::getName() {
+    return data.username;
+}
+
+int Player::getWin() {
+    return data.win;
+}
+
+int Player::getLoss() {
+    return data.loss;
+}
+
+int Player::getPoints() {
+    return data.points;
 }
 
 void Player::print() {
-    cout << "Name: " << name << endl;
-    cout << "Wins: " << win << endl;
-    cout << "Loses: " << loss << endl;
-}
-
-void Player::adminPrint() {
-    cout << "Name: " << name << endl;
-    cout << "Wins: " << win << endl;
-    cout << "Loses: " << loss << endl;
-    cout << "Active: " << boolalpha << active << endl;
+    cout << "Name: " << data.username << endl;
+    cout << "Wins: " << data.win << endl;
+    cout << "Losses: " << data.loss << endl;
+    cout << "Points: " << data.points << endl;
 }

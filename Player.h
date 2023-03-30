@@ -1,38 +1,35 @@
-#ifndef PLAYER_H
-#define PLAYER_H
+#include "Mancala7.h"
 
-#include <algorithm>
-#include <fstream>
-#include <iomanip>
-#include <iostream>
-#include <vector>
-
-using namespace std;
+#ifndef PLAYER_H_
+#define PLAYER_H_
 
 class Player {
 private:
-  string name;
-  int win;
-  int loss;
-  bool active;
+    PlayerData data;
 
 public:
-  Player();
-  Player(string);
-  Player(string, int, int);
-  //Setters
-  void setName(string n) { name = n; }
-  void setWin(int w) { win = w; }
-  void setLoss(int l) { loss = l; }
-  void swapActive() { active = !active; }
-  //Getters
-  string getName() { return name; }
-  int getWin() { return win; }
-  int getLoss() { return loss; }
-  bool getActive();
-  //Print Functions
-  void print();
-  void adminPrint();
+
+    Player(string n);
+
+    void setName(string n);
+
+    void setWin(int w);
+
+    void addWin();
+
+    void setLoss(int l);
+    void addLoss();
+    void setPoints(int p);
+
+    string getName();
+
+    int getWin();
+
+    int getLoss();
+
+    int getPoints();
+
+    void print();
 };
 
-#endif
+#endif /* PLAYER_H_ */
